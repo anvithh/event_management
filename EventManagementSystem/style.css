@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+    --green:rgb(38, 80, 52);
+    --black:#2b2b8a;
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+*::selection {
+    background: var(--green);
+    color: #fff;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 6.5rem;
+    scroll-behavior: smooth;
+}
+
+.header1 {
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+}
+
+.logo {
+    color:var(--black);
+    font-weight: bolder;
+    font-size: 3rem;
+}
+
+.logo i{
+    padding-right: .5rem;
+    color:var(--green);
+}
+
+.search-box{
+    display: flex;
+    height:5rem;
+}
+
+.search-box #search{
+    height: 100%;
+    width:50%;
+    padding:1rem;
+    font-size: 2rem;
+    color:#333;
+    border:.1rem solid rgba(0,0,0,.3);
+    text-transform: none;
+    margin-left: 350px;
+}
+
+.search-box label{
+    height: 100%;
+    width:8rem;
+    font-size: 2.5rem;
+    line-height: 5rem;
+    color:#fff;
+    background:var(--green);
+    text-align: center;
+    cursor: pointer;
+}
+
+.search-box label:hover{
+    background:var(--black);
+}
+
+.header2 {
+    background:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 9%;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    position: relative;
+}
+
+.header2 .navbar a{
+    padding:.5rem 1.5rem;
+    font-size: 2rem;
+    border-radius: .5rem;
+    color:var(--black);
+}
+
+.header2 .navbar a:hover{
+    background: rgb(128, 0, 0);
+    color:#fff;
+}
+
+.header2 .icons a{
+    font-size: 2.5rem;
+    color:var(--black);
+    padding-left: 1rem;
+}
+  
+.header2 .icons a:hover{
+    color:var(--green);
+}
+
+.header2 .navbar.active{
+    display: initial;
+}
+
+.header2.active{
+    position: fixed;
+    top:0; left: 0; right:0;
+    z-index: 10000;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.home .img{
+    flex:1 1 40rem;
+    padding-top: 5rem;
+}
+
+.home .img img {
+    width: 100%;
+}
+
+.home .content {
+    flex: 1 1 40rem;
+}
+
+.home .content span {
+    font-size: 3rem;
+    color: #666;
+}
+
+.home .content h3{
+    font-size: 5rem;
+    color:var(--black);
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    background:var(--green);
+    color:#fff;
+    padding:.8rem 3rem;
+    font-size: 1.7rem;
+    text-align: center;
+    cursor: pointer;
+}
+.btn1{
+    display: inline-block;
+    margin-top: 0rem;
+    background:var(--green);
+    color:#fff;
+    padding:.8rem 3rem;
+    font-size: 1.7rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background:var(--black);
+}
+
+.heading{
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--black);
+  padding:10px;
+}
+
+.product .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+}
+
+.boxcontainer{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+  margin-top:5px;
+}
+
+.product .box-container .box{
+  flex:1 1 30rem;
+  text-align: center;
+  padding:2rem;
+  border:.1rem solid rgba(0,0,0,.3);
+  border-radius: .5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.boxcontainer .boxx{
+  flex:1 1 30rem;
+  text-align: center;
+  padding:2rem;
+  border:.1rem solid rgba(0,0,0,.3);
+  border-radius: .5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.product .box-container .box img{
+  height: 20rem;
+}
+
+.boxcontainer .boxx img{
+  height: 20rem;
+}
+
+.product .box-container .box h3{
+  color:var(--black);
+  font-size: 2.5rem;
+}
+
+.product .box-container .box .price{
+  font-size: 2rem;
+  color:#333;
+  padding:.5rem 0;
+}
+
+.boxcontainer .boxx .price{
+  font-size: 2rem;
+  color:#333;
+  padding:.5rem 0;
+}
+
+.product .box-container .box .quantity{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: .5rem;
+}
+
+.boxcontainer .boxx .quantity{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: .5rem;
+}
+
+.product .box-container .box .quantity span{
+  padding:0 .7rem;
+  font-size: 1.7rem;
+}
+.boxcontainer .boxx .quantity span{
+  padding:0 .7rem;
+  font-size: 1.7rem;
+}
+
+.product .box-container .box .quantity input{
+  border:.1rem solid rgba(0,0,0,.3);
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color:var(--black);
+  padding:.5rem;
+  background:rgba(0,0,0,.05);
+}
+
+.boxcontainer .boxx .quantity input{
+  border:.1rem solid rgba(0,0,0,.3);
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color:var(--black);
+  padding:.5rem;
+  background:rgba(0,0,0,.05);
+}
+
+.product .box-container .box .btn{
+  display: block;
+}
+
+.boxcontainer .boxx .btn{
+  display: block;
+}
+
+
+.footer .box-container{
+  display: flex;
+  gap:1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer .box-container .box{
+  padding:1rem 0;
+  flex:1 1 25rem;
+}
+
+.footer .box-container .box .share a{
+  padding:0;
+  height:4rem;
+  width:4rem;
+  line-height: 4rem;
+  text-align: center;
+}
+
+.footer .box-container .box h3{
+  font-size: 2.5rem;
+  color:var(--black);
+}
+
+.footer .box-container .box p{
+  font-size: 1.3rem;
+  color:#666;
+  padding:.7rem 0;
+}
+
+.footer .box-container .box .links{
+  padding:1rem 0;
+}
+
+.footer .box-container .box .links a{
+  display: block;
+  padding:.5rem 0;
+  font-size: 1.7rem;
+  color:#333;
+}
+
+.footer .box-container .box .links a:hover{
+  text-decoration: underline;
+  color:var(--green);
+}
+
+.footer .credit{
+  padding:2.5rem 1rem;
+  border-top: .1rem solid rgba(0,0,0,.1);
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.footer .credit span{
+  color:var(--green);
+}
+
+
